@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.testbuo">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:name="io.branch.referral.BranchApp">
+        <activity android:name=".MainActivity"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <data android:scheme="testbuo" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+
+        <meta-data android:name="io.branch.sdk.BranchKey" android:value="key_live_odN9FytNImVwIVko7km2rnjlEtfXQpIu" />
+        <meta-data android:name="io.branch.sdk.BranchKey.test" android:value="key_test_kcI4BwwSVoRBNSin8pf06ndfqtm9VfLG" />
+        <meta-data android:name="io.branch.sdk.TestMode" android:value="false" />
+    </application>
+
+</manifest>
